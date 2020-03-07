@@ -1,0 +1,22 @@
+{
+  "name": "stripeweb",
+  "version": "1.0.0",
+  "description": "creating a tutorial proj to learn stripe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growcc/stripeWeb.git"
+  },
+  "author": "Yasin Ehsan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/growcc/stripeWeb/issues"
+  },
+  "homepage": "https://github.com/growcc/stripeWeb#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
