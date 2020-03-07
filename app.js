@@ -68,7 +68,7 @@ var createToken = function () {
         }
     })
 }
-// createToken();
+createToken();
 
 var addCardToCustomer = function () {
 
@@ -85,4 +85,51 @@ var addCardToCustomer = function () {
     })
 }
 
-addCardToCustomer();
+// addCardToCustomer();
+
+var chargeCustomerThroughCustomerID = function () {
+
+    var param = {
+        amount: '1000',
+        currency: 'usd',
+        description:'First payment',
+        customer:'cus_Grv02fXQQxjSDN'
+    }
+
+    stripe.charges.create(param, function (err,charge) {
+        if(err)
+        {
+            console.log("err: "+err);
+        }if(charge)
+        {
+            console.log("success: "+JSON.stringify(charge, null, 2));
+        }else{
+            console.log("Something wrong")
+        }
+    })
+}
+//chargeCustomerThroughCustomerID();
+
+var chargeCustomerThroughTokenID = function () {
+
+    var param = {
+        amount: '8000',
+        currency: 'usd',
+        description:'First payment',
+        source:'tok_1GKBs0D1co9wUsBr63b1991j'
+    }
+
+    stripe.charges.create(param, function (err,charge) {
+        if(err)
+        {
+            console.log("err: "+err);
+        }if(charge)
+        {
+            console.log("success: "+JSON.stringify(charge, null, 2));
+        }else{
+            console.log("Something wrong")
+        }
+    })
+}
+
+// chargeCustomerThroughTokenID();
