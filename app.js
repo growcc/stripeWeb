@@ -113,10 +113,10 @@ var chargeCustomerThroughCustomerID = function () {
 var chargeCustomerThroughTokenID = function () {
 
     var param = {
-        amount: '8000',
+        amount: '800',
         currency: 'usd',
         description:'First payment',
-        source:'tok_1GKBs0D1co9wUsBr63b1991j'
+        source:'tok_1GKBwxD1co9wUsBrKpLPBu0p'
     }
 
     stripe.charges.create(param, function (err,charge) {
@@ -132,4 +132,4 @@ var chargeCustomerThroughTokenID = function () {
     })
 }
 
-// chargeCustomerThroughTokenID();
+chargeCustomerThroughTokenID();
